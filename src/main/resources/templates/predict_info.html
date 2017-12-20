@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head th:include="common/header :: ayonel_header">
+</head>
+
+<body >
+<!-- 加载导航栏-->
+<div th:replace="common/header :: ayonel_top_nav"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div th:replace="common/lefter :: ayonel_lefter"></div>
+
+
+    </div>
+</div>
+
+</body>
+<footer th:include="common/footer :: ayonel_footer"></footer>
+
+</html>

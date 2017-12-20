@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head th:include="common/header :: ayonel_header">
+</head>
+
+<body >
+    <!-- 加载导航栏-->
+    <div th:replace="common/header :: ayonel_top_nav"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div th:replace="common/lefter :: ayonel_lefter"></div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header" th:text="${org}"></h1>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>编号</th>
+                            <th>标题</th>
+                            <th>提交者</th>
+                            <th>创建时间</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr th:each="pull,pullStat : ${pullList}">
+                            <td th:text="${pull.number}"></td>
+                            <td th:text="${pull.title}"></td>
+                            <td th:text="${pull.submitted_by}"></td>
+                            <td th:text="${pull.created_at}"></td>
+                            <td><a th:href="${'/rec/'+org+'/pulls/'+pull.number}"><button class="btn btn-success">预测</button></a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</body>
+<footer th:include="common/footer :: ayonel_footer"></footer>
+
+</html>

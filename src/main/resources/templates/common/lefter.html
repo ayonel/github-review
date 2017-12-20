@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+    <div class="col-sm-3 col-md-2 sidebar"  th:fragment="ayonel_lefter">
+        <ul class="nav nav-sidebar">
+            <li th:each="org, orgStat : ${orgList}" th:text="${org}"></li>
+        </ul>
+    </div>
+
+    <div class="col-sm-3 col-md-2 sidebar"  th:fragment="ayonel_lefter_null">
+        <h2>GitHub评审辅助系统,主要功能为:</h2>
+        <p>1.自动化推荐Pull Reqeust决策者；</p>
+        <p>2.自动化预测Pull Request评审结果；</p>
+        <p></p>
+    </div>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="ayonel_header">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/bootstrap-3.3.7-dist/css/bootstrap.css}" />
+
+    <link rel="icon" th:href="@{/favicon.ico}"/>
+
+    <title>GitHub评审辅助系统</title>
+
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/bootstrap-3.3.7-dist/css/bootstrap.min.css}" rel="stylesheet"/>
+    <!-- Bootstrap theme -->
+    <link th:href="@{/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css}" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <link th:href="@{/bootstrap-3.3.7-dist/css/theme.css}" rel="stylesheet"/>
+    <!-- css by ayonel-->
+    <link th:href="@{/css/ayonel.css}" rel="stylesheet"/>
+    <link th:href="@{/css/dashboard.css}" rel="stylesheet"/>
+    <script th:src="@{/js/ayonel.js}"/>
+
+</head>
+
+<body >
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" th:fragment="ayonel_top_nav" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">GitHub评审辅助系统</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">主页</a></li>
+                    <li><a href="/rec">决策者推荐</a></li>
+                    <li><a href="/predict">评审结果预测</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+</body>
+</html>
