@@ -23,7 +23,7 @@ public class PullPredict {
     private String title;
     private String submitted_by;
     private boolean merged;
-    private boolean predictMerged;
+    private boolean predict_merged;
 
     public int getNumber() {
         return number;
@@ -90,12 +90,12 @@ public class PullPredict {
     }
 
 
-    public boolean isPredictMerged() {
-        return predictMerged;
+    public boolean getPredict_merged() {
+        return predict_merged;
     }
 
-    public void setPredictMerged(boolean predictMerged) {
-        this.predictMerged = predictMerged;
+    public void setPredict_merged(boolean predictMerged) {
+        this.predict_merged = predictMerged;
     }
 
     @Override
